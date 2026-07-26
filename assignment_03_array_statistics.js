@@ -42,5 +42,10 @@
 // =============================================================================
 // YOUR CODE BELOW — remove the // symbols from the scaffold and fill it in
 // =============================================================================
-
-
+const readlineSync = require('readline-sync');
+// Prompt the user for the number of inputs
+const n = readlineSync.questionInt('How many numbers? ');
+if (n <= 0) {
+    console.log('Error: Please enter a positive integer.');
+    return;
+}
