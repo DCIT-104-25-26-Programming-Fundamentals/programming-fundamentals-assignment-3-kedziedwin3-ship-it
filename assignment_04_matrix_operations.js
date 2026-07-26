@@ -69,4 +69,15 @@
 // =============================================================================
 
 const readlineSync = require('readline-sync');
+const rows = readlineSync.questionInt('Enter number of rows: ');
+const cols = readlineSync.questionInt('Enter number of columns: ');
+// Function to read a matrix from user input
+function readMatrix(rows, cols) {
+    const matrix = [];
 
+    for (let i = 0; i < rows; i++) {
+        const row = readlineSync.question(`Enter row ${i + 1}: `).split(' ').map(Number);
+        matrix.push(row);
+    }
+    return matrix;
+}
