@@ -53,5 +53,18 @@
 // =============================================================================
 // YOUR CODE BELOW — remove the // symbols from the scaffold and fill it in
 // =============================================================================
-
-
+const readlineSync = require('readline-sync');
+//PART A — Print the First N Terms
+function printFibonacci(n) {
+    if (n <= 0) {
+        console.log('Error: Please enter a positive integer.');
+        return;
+    }
+    let a = 0, b = 1;
+    const sequence = [a];
+    for (let i = 1; i < n; i++) {
+        sequence.push(b);
+        [a, b] = [b, a + b];
+    }
+    console.log(`Fibonacci sequence: ${sequence.join(' ')}`);
+}
