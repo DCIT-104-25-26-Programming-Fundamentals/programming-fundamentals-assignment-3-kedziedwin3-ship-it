@@ -84,4 +84,16 @@
 // YOUR CODE BELOW — remove the // symbols from the scaffold and fill it in
 // =============================================================================
 
-
+const readlineSync = require('readline-sync');
+let students = [];
+function showMenu() {
+    console.log('===============================');
+    console.log('   STUDENT RECORD SYSTEM MENU');
+    console.log('===============================');
+    console.log('1. Add student');
+    console.log('2. Display all students');
+    console.log('3. Calculate average score');
+    console.log('4. Quit');
+    const choice = readlineSync.questionInt('Enter your choice (1-4): ');
+    return choice;
+}
