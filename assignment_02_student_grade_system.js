@@ -48,5 +48,24 @@
 // =============================================================================
 // YOUR CODE BELOW — remove the // symbols from the scaffold and fill it in
 // =============================================================================
-
-
+const readlineSync = require('readline-sync');
+// Prompt the user for input
+const score = readlineSync.questionInt('Enter student score (0-100): ');
+function getGrade(score) {
+    if (score < 0 || score > 100) {
+        return null;
+    }
+    if (score >= 80) {
+        return 'A';
+    }
+    if (score >= 70) {
+        return 'B';
+    }
+    if (score >= 60) {
+        return 'C';
+    }
+    if (score >= 50) {
+        return 'D';
+    }
+    return 'F';
+}
