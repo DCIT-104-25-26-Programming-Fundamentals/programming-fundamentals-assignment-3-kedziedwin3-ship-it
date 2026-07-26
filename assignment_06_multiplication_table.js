@@ -58,5 +58,15 @@
 // =============================================================================
 // YOUR CODE BELOW — remove the // symbols from the scaffold and fill it in
 // =============================================================================
-
-
+const readlineSync = require('readline-sync');
+//Function to print multiplication table for a single number
+function printMultiplicationTable(num) {
+    if (num <= 0) {
+        console.log('Error: Please enter a positive integer.');
+        return;
+    }
+    console.log(`Multiplication Table for ${num}:`);
+    for (let i = 1; i <= 12; i++) {
+        console.log(`${num}  x  ${i}  =  ${num * i}`);
+    }
+}
