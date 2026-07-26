@@ -42,4 +42,15 @@
 // YOUR CODE BELOW — remove the // symbols from the scaffold and fill it in
 // =============================================================================
 
-
+const readlineSync = require('readline-sync');
+function isPrime(num) {
+    if (num < 2) {
+        return false;
+    }
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
